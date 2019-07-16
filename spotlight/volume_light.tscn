@@ -1,0 +1,123 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://volume_light.gd" type="Script" id=1]
+[ext_resource path="res://volume_light.png" type="Texture" id=2]
+
+[sub_resource type="FixedMaterial" id=1]
+
+resource/name = "Mat"
+flags/visible = true
+flags/double_sided = true
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 0.0
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 1, 1, 1, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40.0
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="Mesh" id=2]
+
+surfaces/0 = {
+"alphasort": false,
+"arrays": [ Vector3Array( 1.5, 0, 7.5, 1.5, 0, -7.5, -1.5, 0, -7.5, -1.5, 0, 7.5 ), Vector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 ), null, null, Vector3Array( 0.00159138, 0.99647, 0, 0.99823, 1.00045, 0, 0.998282, -0.00301003, 0, 0.000118673, 0.00137901, 0 ), null, null, null, IntArray( 0, 2, 1, 0, 3, 2 ) ],
+"material": SubResource( 1 ),
+"morph_arrays": [  ],
+"name": "Mat",
+"primitive": 4
+}
+custom_aabb/custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+
+[sub_resource type="FixedMaterial" id=3]
+
+flags/visible = true
+flags/double_sided = true
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 1
+params/depth_draw = 1
+params/line_width = 0.0
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0, 0, 0, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0.296875, 0.280005, 0.142639, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission = ExtResource( 2 )
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[node name="volume_light" type="Spatial"]
+
+_import_path = NodePath(".")
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="Plane" type="MeshInstance" parent="."]
+
+_import_path = NodePath("Plane")
+_import_transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 0
+geometry/receive_shadows = false
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = SubResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = SubResource( 3 )
+
+

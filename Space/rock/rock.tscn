@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://rock/rock.gd" type="Script" id=1]
+[ext_resource path="res://sheets/sheet.meteorGrey_big4.atex" type="Texture" id=2]
+
+[node name="rock" type="KinematicBody2D"]
+
+input/pickable = false
+collision/layers = 1
+collision/mask = 11
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+bounce = 100
+
+[node name="sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="puff" type="Particles2D" parent="."]
+
+config/amount = 32
+config/lifetime = 0.4
+config/preprocess = 0.1
+config/emit_timeout = 0.4
+config/emitting = false
+config/process_mode = 1
+config/half_extents = Vector2( 20, 20 )
+config/explosiveness = 0.1
+params/direction = 0.0
+params/spread = 180.0
+params/linear_velocity = 50.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 5.0
+params/final_size = 0.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+
+

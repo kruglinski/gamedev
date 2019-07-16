@@ -1,0 +1,178 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://female.scn" type="PackedScene" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Spatial
+
+func _ready():
+	set_process(true)
+
+func _process(delta):
+	rotate_y(delta*0.5)
+"
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "extends Label
+
+func _ready():
+	set_text(\"FPS: %d\" % OS.get_frames_per_second())
+
+
+func _on_Timer_timeout():
+	set_text(\"FPS: %d\" % OS.get_frames_per_second())
+"
+
+[sub_resource type="Environment" id=3]
+
+ambient_light/enabled = true
+ambient_light/color = Color( 1, 1, 1, 1 )
+ambient_light/energy = 0.4
+fxaa/enabled = false
+background/mode = 1
+background/color = Color( 0, 0, 0, 1 )
+background/energy = 1.0
+background/scale = 1.0
+background/glow = 0.0
+background/canvas_max_layer = null
+glow/enabled = false
+glow/blur_passes = 1
+glow/blur_scale = 1
+glow/blur_strength = 1
+glow/blur_blend_mode = null
+glow/bloom = 0.4
+glow/bloom_treshold = 0.5
+dof_blur/enabled = false
+dof_blur/blur_passes = 1
+dof_blur/begin = 100.0
+dof_blur/range = 10.0
+hdr/enabled = false
+hdr/tonemapper = 0
+hdr/exposure = 0.4
+hdr/white = 1.0
+hdr/glow_treshold = 0.95
+hdr/glow_scale = 0.2
+hdr/min_luminance = 0.4
+hdr/max_luminance = 8.0
+hdr/exposure_adj_speed = 0.5
+fog/enabled = false
+fog/begin = 100.0
+fog/begin_color = Color( 0, 0, 0, 1 )
+fog/end_color = Color( 0, 0, 0, 1 )
+fog/attenuation = 1.0
+fog/bg = true
+bcs/enabled = false
+bcs/brightness = 1.0
+bcs/contrast = 1.0
+bcs/saturation = 1.0
+srgb/enabled = false
+
+[node name="main" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="female" parent="." instance=ExtResource( 1 )]
+
+transform/local = Transform( 1, 0, 0, 4.443e-28, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="light_main" type="DirectionalLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 7.10543e-15, -3.55271e-15, 4.443e-28, 0.801142, 0.598475, 0, -0.598475, 0.801142, -14.5215, 0, 1.54682 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 1
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 0.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 0.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="light_back" type="DirectionalLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64275e-15, -8.74228e-08, -1, -16.8862, 0, -7.84103 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 1
+params/energy = 0.5
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 0.0
+shadow/blur_passes = 0.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 0.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="Spatial" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 0.992775, 0.119993, 0, -0.119993, 0.992775, 0, 1.26323, 3.16355 )
+projection = 0
+fov = 34.0
+near = 0.1
+far = 100.0
+keep_aspect = 1
+current = false
+visible_layers = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 24.0
+margin/top = 23.0
+margin/right = 64.0
+margin/bottom = 37.0
+text = "FPS: "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+environment = SubResource( 3 )
+
+[connection signal="timeout" from="Timer" to="Label" method="_on_Timer_timeout"]
+
+

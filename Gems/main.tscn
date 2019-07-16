@@ -1,0 +1,121 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://consola.fnt" type="BitmapFont" id=3]
+
+[node name="world" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1268, 580.909 )
+
+[node name="gem_container" type="Node2D" parent="."]
+
+[node name="HUD" type="YSort" parent="."]
+
+z/z = 10
+sort/enabled = true
+
+[node name="hud_score" type="Label" parent="HUD"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 150.0
+margin/top = 50.0
+margin/right = 384.0
+margin/bottom = 82.0
+custom_fonts/font = ExtResource( 3 )
+text = "score: 000000"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hud_time_remain" type="Label" parent="HUD"]
+
+anchor/left = 1
+anchor/right = 1
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -2186.0
+margin/top = 50.0
+margin/right = -2330.0
+margin/bottom = 82.0
+custom_fonts/font = ExtResource( 3 )
+text = "time: 00"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hud_game_over" type="Label" parent="HUD"]
+
+visibility/visible = false
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 900.0
+margin/top = 500.0
+margin/right = 1062.0
+margin/bottom = 532.0
+custom_fonts/font = ExtResource( 3 )
+text = "Game Over"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hud_restart" type="Button" parent="HUD"]
+
+visibility/visible = false
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 936.0
+margin/top = 696.0
+margin/right = 1074.0
+margin/bottom = 734.0
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Restart"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[connection signal="button_up" from="HUD/hud_restart" to="." method="_on_hud_restart_button_up"]
+
+[connection signal="timeout" from="timer" to="." method="_on_Timer_timeout"]
+
+
