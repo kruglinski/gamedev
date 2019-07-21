@@ -162,6 +162,17 @@ drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="player"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="Timer" type="Timer" parent="player"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 layer = 1
@@ -172,6 +183,10 @@ scale = Vector2( 1, 1 )
 [node name="controller" parent="CanvasLayer" instance=ExtResource( 8 )]
 
 controller_color = Color( 1, 1, 1, 0.2 )
+
+[connection signal="exit_viewport" from="player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_exit_viewport"]
+
+[connection signal="timeout" from="player/Timer" to="." method="_on_Timer_timeout"]
 
 [connection signal="action_1_pressed" from="CanvasLayer/controller" to="player" method="_on_controller_action_1_pressed"]
 

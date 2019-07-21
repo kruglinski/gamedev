@@ -22,6 +22,9 @@ func _ready():
 	set_process(true)
 	set_fixed_process(true)
 
+func hurt():
+	sound.play("pain")
+
 func is_on_floor():
 	return left_ray.is_colliding() or right_ray.is_colliding()
 

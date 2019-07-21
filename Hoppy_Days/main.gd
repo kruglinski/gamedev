@@ -11,3 +11,13 @@ func play_music(path):
 
 func _ready():
 	play_music("res://SFX/Chiptune_Adventures_1.ogg")
+
+
+func _on_VisibilityNotifier2D_exit_viewport( viewport ):
+	var pos = get_node("player").get_pos()
+	if pos.y > 0:
+		get_node("player").hurt()
+		get_node("player/Timer").start()
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Scenes/hud/game_over.tscn")
