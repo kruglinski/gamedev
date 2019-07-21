@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/hud/hud.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=6]
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
@@ -15,13 +15,6 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
-
-[sub_resource type="StyleBoxEmpty" id=1]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
@@ -51,6 +44,13 @@ content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
 
+[sub_resource type="StyleBoxEmpty" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
 [node name="game_over" type="CanvasLayer"]
 
 layer = 1
@@ -72,8 +72,9 @@ __meta__ = {
 
 transform/pos = Vector2( 1330, 380 )
 transform/scale = Vector2( 2, 2 )
-frames = SubResource( 6 )
+frames = SubResource( 1 )
 animation = "default"
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -111,11 +112,11 @@ margin/left = 0.0
 margin/top = 980.0
 margin/right = 2688.0
 margin/bottom = 1143.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.227051, 0.395092, 0.96875, 1 )
 toggle_mode = false
@@ -133,7 +134,7 @@ stream/stream = ExtResource( 6 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 0.0
-stream/autoplay = false
+stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
