@@ -1,0 +1,138 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Scenes/controller/buttons.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/controller/buttons_font.fnt" type="BitmapFont" id=2]
+
+[node name="controller" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+controller_color = Color( 1, 1, 1, 0.4 )
+
+[node name="navi_left_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 420, 920 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="navi_left_pos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -100.0
+margin/top = -100.0
+margin/right = 100.0
+margin/bottom = 100.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.246094, 0.864532, 1 )
+text = "L"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="navi_right_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 660, 1080 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="navi_right_pos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -100.0
+margin/top = -100.0
+margin/right = 100.0
+margin/bottom = 100.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.246094, 0.864532, 1 )
+text = "R"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="action_1_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 2220, 1040 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="action_1_pos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -100.0
+margin/top = -100.0
+margin/right = 100.0
+margin/bottom = 100.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.246094, 0.864532, 1 )
+text = "A"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="action_2_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 2460, 900 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="action_2_pos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -100.0
+margin/top = -100.0
+margin/right = 100.0
+margin/bottom = 100.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.246094, 0.864532, 1 )
+text = "B"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+
