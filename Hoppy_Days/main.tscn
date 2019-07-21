@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/tiles/tiles.tres" type="TileSet" id=6]
 [ext_resource path="res://Scenes/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/controller/controller.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/environment/spikes_top.tscn" type="PackedScene" id=9]
 
 [node name="main" type="Node2D"]
 
@@ -183,6 +184,12 @@ scale = Vector2( 1, 1 )
 [node name="controller" parent="CanvasLayer" instance=ExtResource( 8 )]
 
 controller_color = Color( 1, 1, 1, 0.2 )
+
+[node name="spikes" type="Node2D" parent="."]
+
+[node name="spike" parent="spikes" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 912.271, 557.436 )
 
 [connection signal="exit_viewport" from="player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_exit_viewport"]
 

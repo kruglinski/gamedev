@@ -80,3 +80,6 @@ func _on_controller_action_2_pressed():
 	if is_on_floor():
 		sound.play("jump")
 		vel.y = MAX_JUMP
+
+func _on_spike_body_enter( body ):
+	print("fuck")
