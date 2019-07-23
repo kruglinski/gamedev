@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+signal update_hud
+signal player_death
+
 const ACCEL = 1500
 const MAX_SPEED = 10
 const FRICTION = -500
@@ -81,5 +84,20 @@ func _on_controller_action_2_pressed():
 		sound.play("jump")
 		vel.y = MAX_JUMP
 
-func _on_spike_body_enter( body ):
-	print("fuck")
+func enter_spring(body):
+	sound.play("jump")
+	vel.y = MAX_JUMP
+
+func enter_spike(body):
+	global.life_count -= 1
+	if global.life_count == 0:
+		emit_signal("player_death")
+
+	emit_signal("update_hud")
+
+func enter_coin(body):
+	global.coin_count += 1
+	emit_signal("update_hud")
+
+func enter_portal(body):
+	print("enter portal")

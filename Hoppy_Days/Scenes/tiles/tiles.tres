@@ -23,82 +23,82 @@ points = Vector2Array( -190.401, -35.5802, -177.133, -46.8583, 177.134, -46.8583
 custom_solver_bias = 0.0
 points = Vector2Array( -99.5615, -40.1316, -87.2479, -49.6647, 89.1152, -50.4592, 98.6483, -42.5149, 101.826, -20.6681, 77.596, 46.4611, 70.4461, 50.4332, -74.9343, 41.6945, -81.2897, 35.3391, -100.356, -18.2848 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 15.137, -18.731, 2.8233, 26.5515, -3.5321, 25.757, -15.0513, -17.9365 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 33.4088, 26.1542, 27.0534, 26.5515, 15.137, -18.731, 46.9141, -27.0724 )
 
-[sub_resource type="ConvexPolygonShape2D" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -47.2256, -27.0724, 46.9141, -27.0724, 15.137, -18.731, -15.0513, -17.9365 )
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -33.7204, 26.1542, -47.2256, -27.0724, -15.0513, -17.9365, -26.5705, 26.1542 )
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -34.256, -25.5546, -27.6541, -26.4348, -15.7708, 18.4581, -47.4597, 25.5001 )
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 45.847, 25.9402, -47.4597, 25.5001, -15.7708, 18.4581, 13.7178, 18.8983 )
 
-[sub_resource type="ConvexPolygonShape2D" id=17]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 13.7178, 18.8983, 26.4814, -26.4348, 33.5234, -25.9946, 45.847, 25.9402 )
 
-[sub_resource type="ConvexPolygonShape2D" id=18]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 13.7178, 18.8983, -15.7708, 18.4581, -3.00708, -26.8749, 3.59485, -26.8749 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -190.39, -36.0279, -178.066, -47.0311, 171.287, -47.9603, 185.918, -42.5959, 189.819, -18.2122, 163.485, 31.043, 156.17, 36.4074, -162.785, 47.0011, -190.478, -14.0868 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -100.354, -39.2786, -87.9254, -50.0858, 87.6916, -50.0858, 100.12, -40.3593, 101.741, -19.8257, 78.5055, 43.9368, 70.4001, 50.9615, -72.2549, 42.3157, -81.9814, 36.9121, -100.354, -19.2853 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -191.581, -31.5335, -180.555, -46.9704, 178.17, -46.2353, 189.931, -35.209, 191.402, -15.3615, 159.793, 35.3598, -159.237, 48.5915, -192.316, -14.6264 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=14]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -98.2012, -40.4287, -88.5184, -50.1115, 89.7328, -50.1115, 99.4155, -39.9886, 101.149, -23.1186, 74.6859, 50.3905, -78.9481, 42.3045, -99.9617, -21.9435 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=15]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -189.065, -37.314, -176.741, -47.8771, 176.24, -47.8771, 188.124, -39.0746, 190.764, -14.8676, 161.716, 35.3068, -161.337, 47.1902, -189.945, -13.9874 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -99.1893, -40.2022, -87.5421, -50.2318, 90.4012, -48.9376, 99.1367, -39.5552, 101.401, -19.1725, 75.1952, 50.0636, -77.8361, 40.3576, -99.8363, -17.2314 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -25.7648, -43.5852, 25.441, -43.0975, 3.00806, 43.7086, -4.30701, 42.7332 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509, 25.3866, 43.0634 )
@@ -114,8 +114,8 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 0/navigation_offset = Vector2( 190, 47 )
 0/shape_offset = Vector2( 190, 47 )
 0/shapes = [ SubResource( 1 ) ]
-0/one_way_collision_direction = Vector2( 0, 1 )
-0/one_way_collision_max_depth = 20.0
+0/one_way_collision_direction = Vector2( 0, 0 )
+0/one_way_collision_max_depth = 0.0
 1/name = "ground_cake_small"
 1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
@@ -125,8 +125,8 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 1/navigation_offset = Vector2( 100.5, 50 )
 1/shape_offset = Vector2( 100.5, 50 )
 1/shapes = [ SubResource( 2 ) ]
-1/one_way_collision_direction = Vector2( 0, 1 )
-1/one_way_collision_max_depth = 20.0
+1/one_way_collision_direction = Vector2( 0, 0 )
+1/one_way_collision_max_depth = 0.0
 2/name = "ground_grass"
 2/texture = ExtResource( 5 )
 2/tex_offset = Vector2( 0, 0 )
@@ -135,9 +135,9 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 2/occluder_offset = Vector2( 190, 47 )
 2/navigation_offset = Vector2( 190, 47 )
 2/shape_offset = Vector2( 190, 47 )
-2/shapes = [ SubResource( 3 ) ]
-2/one_way_collision_direction = Vector2( 0, 1 )
-2/one_way_collision_max_depth = 20.0
+2/shapes = [ SubResource( 11 ) ]
+2/one_way_collision_direction = Vector2( 0, 0 )
+2/one_way_collision_max_depth = 0.0
 3/name = "ground_grass_small"
 3/texture = ExtResource( 6 )
 3/tex_offset = Vector2( 0, 0 )
@@ -146,9 +146,9 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 3/occluder_offset = Vector2( 100.5, 50 )
 3/navigation_offset = Vector2( 100.5, 50 )
 3/shape_offset = Vector2( 100.5, 50 )
-3/shapes = [ SubResource( 4 ) ]
-3/one_way_collision_direction = Vector2( 0, 1 )
-3/one_way_collision_max_depth = 20.0
+3/shapes = [ SubResource( 12 ) ]
+3/one_way_collision_direction = Vector2( 0, 0 )
+3/one_way_collision_max_depth = 0.0
 4/name = "ground_sand"
 4/texture = ExtResource( 7 )
 4/tex_offset = Vector2( 0, 0 )
@@ -157,9 +157,9 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 4/occluder_offset = Vector2( 190, 47 )
 4/navigation_offset = Vector2( 190, 47 )
 4/shape_offset = Vector2( 190, 47 )
-4/shapes = [ SubResource( 5 ) ]
-4/one_way_collision_direction = Vector2( 0, 1 )
-4/one_way_collision_max_depth = 20.0
+4/shapes = [ SubResource( 13 ) ]
+4/one_way_collision_direction = Vector2( 0, 0 )
+4/one_way_collision_max_depth = 0.0
 5/name = "ground_sand_small"
 5/texture = ExtResource( 8 )
 5/tex_offset = Vector2( 0, 0 )
@@ -168,9 +168,9 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 5/occluder_offset = Vector2( 100.5, 50 )
 5/navigation_offset = Vector2( 100.5, 50 )
 5/shape_offset = Vector2( 100.5, 50 )
-5/shapes = [ SubResource( 6 ) ]
-5/one_way_collision_direction = Vector2( 0, 1 )
-5/one_way_collision_max_depth = 20.0
+5/shapes = [ SubResource( 14 ) ]
+5/one_way_collision_direction = Vector2( 0, 0 )
+5/one_way_collision_max_depth = 0.0
 6/name = "ground_snow"
 6/texture = ExtResource( 9 )
 6/tex_offset = Vector2( 0, 0 )
@@ -179,9 +179,9 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 6/occluder_offset = Vector2( 190, 47 )
 6/navigation_offset = Vector2( 190, 47 )
 6/shape_offset = Vector2( 190, 47 )
-6/shapes = [ SubResource( 7 ) ]
-6/one_way_collision_direction = Vector2( 0, 1 )
-6/one_way_collision_max_depth = 20.0
+6/shapes = [ SubResource( 15 ) ]
+6/one_way_collision_direction = Vector2( 0, 0 )
+6/one_way_collision_max_depth = 0.0
 7/name = "ground_snow_small"
 7/texture = ExtResource( 10 )
 7/tex_offset = Vector2( 0, 0 )
@@ -190,9 +190,9 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 7/occluder_offset = Vector2( 100.5, 50 )
 7/navigation_offset = Vector2( 100.5, 50 )
 7/shape_offset = Vector2( 100.5, 50 )
-7/shapes = [ SubResource( 8 ) ]
-7/one_way_collision_direction = Vector2( 0, 1 )
-7/one_way_collision_max_depth = 20.0
+7/shapes = [ SubResource( 16 ) ]
+7/one_way_collision_direction = Vector2( 0, 0 )
+7/one_way_collision_max_depth = 0.0
 8/name = "spike_bottom"
 8/texture = ExtResource( 11 )
 8/tex_offset = Vector2( 0, 0 )
@@ -201,7 +201,7 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 8/occluder_offset = Vector2( 25.5, 43.5 )
 8/navigation_offset = Vector2( 25.5, 43.5 )
 8/shape_offset = Vector2( 25.5, 43.5 )
-8/shapes = [ SubResource( 9 ) ]
+8/shapes = [ SubResource( 17 ) ]
 8/one_way_collision_direction = Vector2( 0, 0 )
 8/one_way_collision_max_depth = 0.0
 9/name = "spike_top"
@@ -212,7 +212,7 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 9/occluder_offset = Vector2( 25.5, 43.5 )
 9/navigation_offset = Vector2( 25.5, 43.5 )
 9/shape_offset = Vector2( 25.5, 43.5 )
-9/shapes = [ SubResource( 10 ) ]
+9/shapes = [ SubResource( 18 ) ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
 10/name = "spikes_bottom"
@@ -223,7 +223,7 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 10/occluder_offset = Vector2( 47.5, 26.5 )
 10/navigation_offset = Vector2( 47.5, 26.5 )
 10/shape_offset = Vector2( 47.5, 26.5 )
-10/shapes = [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ]
+10/shapes = [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
 10/one_way_collision_direction = Vector2( 0, 0 )
 10/one_way_collision_max_depth = 0.0
 11/name = "spikes_top"
@@ -234,7 +234,7 @@ points = Vector2Array( -26.1048, 42.4647, -3.95157, -44.9509, 3.23331, -44.9509,
 11/occluder_offset = Vector2( 47.5, 26.5 )
 11/navigation_offset = Vector2( 47.5, 26.5 )
 11/shape_offset = Vector2( 47.5, 26.5 )
-11/shapes = [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ]
+11/shapes = [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ]
 11/one_way_collision_direction = Vector2( 0, 0 )
 11/one_way_collision_max_depth = 0.0
 
