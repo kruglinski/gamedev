@@ -143,6 +143,7 @@ __meta__ = {
 [node name="player" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 455.959, 512.745 )
+z/z = 1
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 
