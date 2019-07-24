@@ -19,13 +19,13 @@ func _ready():
 						Tween.TRANS_QUAD, Tween.EASE_OUT)
 
 func _on_coin_body_enter( body ):
+	clear_shapes()
 	body.enter_coin(self)
 	sfx.play("coin")
 	fx.start()
 
 func _on_fx_tween_complete( object, key ):
 	queue_free()
-
 
 func _on_anim_timer_timeout():
 	anim_sprite.play("default")
