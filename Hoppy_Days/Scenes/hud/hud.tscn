@@ -1,10 +1,44 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://Scenes/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://GFX/HUD/bannerHanging.png" type="Texture" id=2]
 [ext_resource path="res://GFX/HUD/coin_bronze.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/hud/score.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://GFX/HUD/lifes.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "anim"
+length = 0.5
+loop = false
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("coin_icon:rect/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.25, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "anim"
+length = 0.5
+loop = false
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("life_icon:rect/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.25, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
 
 [node name="HUD" type="Control"]
 
@@ -91,5 +125,27 @@ text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="anim_coin" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/anim = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="anim_life" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/anim = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 

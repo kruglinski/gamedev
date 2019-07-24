@@ -48,8 +48,6 @@ script/script = ExtResource( 1 )
 
 frames = SubResource( 2 )
 animation = "default"
-frame = 2
-playing = true
 
 [node name="shape" type="CollisionShape2D" parent="."]
 
@@ -81,8 +79,17 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
+[node name="anim_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
 [connection signal="body_enter" from="." to="." method="_on_coin_body_enter"]
 
 [connection signal="tween_complete" from="fx" to="." method="_on_fx_tween_complete"]
+
+[connection signal="timeout" from="anim_timer" to="." method="_on_anim_timer_timeout"]
 
 

@@ -17,15 +17,8 @@ func _ready():
 
 	play_music("res://SFX/Chiptune_Adventures_1.ogg")
 
-func _on_VisibilityNotifier2D_exit_viewport( viewport ):
-	var pos = player.get_pos()
-	if pos.y > 0:
-		player.hurt()
-		game_over_timer.start()
-
 func _on_game_over_timeout():
 	global.game_over()
 
 func _on_player_player_death():
-	player.hurt()
 	game_over_timer.start()

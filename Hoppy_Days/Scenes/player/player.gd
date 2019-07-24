@@ -25,9 +25,6 @@ func _ready():
 	set_process(true)
 	set_fixed_process(true)
 
-func hurt():
-	sound.play("pain")
-
 func is_on_floor():
 	return left_ray.is_colliding() or right_ray.is_colliding()
 
@@ -86,12 +83,37 @@ func _on_controller_action_2_pressed():
 
 func enter_spring(body):
 	sound.play("jump")
-	vel.y = MAX_JUMP
+	vel.y = MAX_JUMP * 2
 
-func enter_spike(body):
+func enter_spike_man(body, pain_jump):
+	sound.play("pain")
 	global.life_count -= 1
 	if global.life_count == 0:
-		emit_signal("player_death")
+		dead()
+
+	if pain_jump:
+		vel.y = MIN_JUMP
+
+		var them_pos = body.get_pos()
+		var me_pos = get_pos()
+
+		vel.x = sign(me_pos.x-them_pos.x) * 20
+
+	emit_signal("update_hud")
+
+func enter_spike(body, pain_jump):
+	sound.play("pain")
+	global.life_count -= 1
+	if global.life_count == 0:
+		dead()
+
+	if pain_jump:
+		vel.y = MIN_JUMP
+
+		var them_pos = body.get_pos()
+		var me_pos = get_pos()
+
+		vel.x = sign(me_pos.x-them_pos.x) * 20
 
 	emit_signal("update_hud")
 
@@ -101,3 +123,15 @@ func enter_coin(body):
 
 func enter_portal(body):
 	print("enter portal")
+
+func _on_VisibilityNotifier2D_exit_viewport( viewport ):
+	if get_pos().y > 0:
+		dead()
+
+func dead():
+	sound.play("pain")
+	emit_signal("player_death")
+
+	anim_sprite.stop()
+	set_process(false)
+	set_fixed_process(false)

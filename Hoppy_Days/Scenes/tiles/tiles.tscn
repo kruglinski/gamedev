@@ -19,32 +19,32 @@ points = Vector2Array( -190.401, -35.5802, -177.133, -46.8583, 177.134, -46.8583
 custom_solver_bias = 0.0
 points = Vector2Array( -99.5615, -40.1316, -87.2479, -49.6647, 89.1152, -50.4592, 98.6483, -42.5149, 101.826, -20.6681, 77.596, 46.4611, 70.4461, 50.4332, -74.9343, 41.6945, -81.2897, 35.3391, -100.356, -18.2848 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -190.39, -36.0279, -178.066, -47.0311, 171.287, -47.9603, 185.918, -42.5959, 189.819, -18.2122, 163.485, 31.043, 156.17, 36.4074, -162.785, 47.0011, -190.478, -14.0868 )
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -100.354, -39.2786, -87.9254, -50.0858, 87.6916, -50.0858, 100.12, -40.3593, 101.741, -19.8257, 78.5055, 43.9368, 70.4001, 50.9615, -72.2549, 42.3157, -81.9814, 36.9121, -100.354, -19.2853 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -191.581, -31.5335, -180.555, -46.9704, 178.17, -46.2353, 189.931, -35.209, 191.402, -15.3615, 159.793, 35.3598, -159.237, 48.5915, -192.316, -14.6264 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -98.2012, -40.4287, -88.5184, -50.1115, 89.7328, -50.1115, 99.4155, -39.9886, 101.149, -23.1186, 74.6859, 50.3905, -78.9481, 42.3045, -99.9617, -21.9435 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -189.065, -37.314, -176.741, -47.8771, 176.24, -47.8771, 188.124, -39.0746, 190.764, -14.8676, 161.716, 35.3068, -161.337, 47.1902, -189.945, -13.9874 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -99.1893, -40.2022, -87.5421, -50.2318, 90.4012, -48.9376, 99.1367, -39.5552, 101.401, -19.1725, 75.1952, 50.0636, -77.8361, 40.3576, -99.8363, -17.2314 )
@@ -121,7 +121,7 @@ texture = ExtResource( 3 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ground_grass"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 19 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -152,7 +152,7 @@ texture = ExtResource( 4 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ground_grass_small"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 20 )
+shapes/0/shape = SubResource( 4 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -183,7 +183,7 @@ texture = ExtResource( 5 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ground_sand"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 21 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -214,7 +214,7 @@ texture = ExtResource( 6 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ground_sand_small"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 22 )
+shapes/0/shape = SubResource( 6 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -245,7 +245,7 @@ texture = ExtResource( 7 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ground_snow"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 23 )
+shapes/0/shape = SubResource( 7 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -276,7 +276,7 @@ texture = ExtResource( 8 )
 [node name="StaticBody2D" type="StaticBody2D" parent="ground_snow_small"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 24 )
+shapes/0/shape = SubResource( 8 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1

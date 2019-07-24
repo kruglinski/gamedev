@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://Scenes/Levels/level_01.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Scenes/items/spring.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/items/coin.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/items/portal.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/enemies/spike_man.tscn" type="PackedScene" id=17]
 
 [node name="level_01" type="Node2D"]
 
@@ -142,7 +143,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 2
 occluder/light_mask = 1
-tile_data = IntArray( 131085, 0, 131101, 0, 327684, 0, 327701, 0, 589837, 0, 720900, 0 )
+tile_data = IntArray( 131085, 0, 131101, 0, 327684, 0, 327701, 0, 589837, 0, 720900, 0, 917519, 3 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -156,8 +157,7 @@ autostart = false
 
 [node name="player" parent="." instance=ExtResource( 7 )]
 
-editor/display_folded = true
-transform/pos = Vector2( 378.709, 580.907 )
+transform/pos = Vector2( 567.127, 606.532 )
 z/z = 1
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -182,13 +182,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="player"]
-
-rect = Rect2( -10, -10, 20, 20 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 editor/display_folded = true
@@ -205,23 +198,21 @@ controller_color = Color( 1, 1, 1, 0.2 )
 
 [node name="spikes" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="spike_down" parent="spikes" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 295.622, 280.59 )
+transform/pos = Vector2( 330.784, 256.532 )
 
 [node name="spike_top" parent="spikes" instance=ExtResource( 11 )]
 
-transform/pos = Vector2( 880.185, 83.509 )
+transform/pos = Vector2( 497.213, 208.44 )
 
 [node name="spikes_down" parent="spikes" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 1377.9, 282.26 )
+transform/pos = Vector2( 415.014, 257.031 )
 
 [node name="spikes_top" parent="spikes" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 898.557, 549.489 )
+transform/pos = Vector2( 918.913, 73.88 )
 
 [node name="springs" type="Node2D" parent="."]
 
@@ -232,7 +223,7 @@ __meta__ = {
 
 [node name="spring" parent="springs" instance=ExtResource( 14 )]
 
-transform/pos = Vector2( 1077.09, 518.953 )
+transform/pos = Vector2( 1073.39, 37.7923 )
 
 [node name="coins" type="Node2D" parent="."]
 
@@ -242,15 +233,96 @@ __meta__ = {
 
 [node name="coin" parent="coins" instance=ExtResource( 15 )]
 
-transform/pos = Vector2( 568.892, 664.056 )
+transform/pos = Vector2( 511.881, 646.848 )
+
+[node name="coin_1" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 584.518, 583.449 )
+
+[node name="coin_2" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 598.396, 466.042 )
+
+[node name="coin_3" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 646.2, 656.101 )
+
+[node name="coin_4" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 500.091, 525.125 )
+
+[node name="coin_5" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 659.572, 543.766 )
+
+[node name="coin_6" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1123.88, 503.682 )
+
+[node name="coin_7" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1195.7, 375.077 )
+
+[node name="coin_8" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1287.56, 248.144 )
+
+[node name="coin_9" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1514.71, 218.08 )
+
+[node name="coin_10" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1726.18, -46.2609 )
+
+[node name="coin_11" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2035.84, 16.6775 )
+
+[node name="coin_12" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1988, -63.8837 )
+
+[node name="coin_16" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2103.81, -58.8486 )
+
+[node name="coin_17" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2103.81, -58.8486 )
+
+[node name="coin_13" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2131.5, 46.8879 )
+
+[node name="coin_14" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2040.87, 99.7561 )
+
+[node name="coin_15" parent="coins" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1955.27, 44.3704 )
 
 [node name="portal" parent="." instance=ExtResource( 16 )]
 
-transform/pos = Vector2( 1578.32, 242.176 )
+transform/pos = Vector2( 1079.85, 821.209 )
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="spike_man" parent="enemies" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 452.16, 243.327 )
+long_walk = true
+
+[node name="spike_man_2" parent="enemies" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 428.235, 627.979 )
+
+[node name="spike_man_1" parent="enemies" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 1023.88, 48.7099 )
 
 [connection signal="update_hud" from="player" to="CanvasLayer/HUD" method="_on_player_update_hud"]
-
-[connection signal="exit_viewport" from="player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_exit_viewport"]
 
 [connection signal="action_1_pressed" from="CanvasLayer/controller" to="player" method="_on_controller_action_1_pressed"]
 

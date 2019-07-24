@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://Scenes/enemies/spike_man.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Enemies/spikeMan_jump.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Enemies/spikeMan_stand.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Enemies/spikeMan_walk1.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Enemies/spikeMan_walk2.png" type="Texture" id=4]
-[ext_resource path="res://GFX/Enemies/spikeMan_stand.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Enemies/spikeMan_jump.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/enemies/spike_man_ai.tres" type="Animation" id=6]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 44.23, 61.5056 )
@@ -16,7 +17,7 @@ extents = Vector2( 44.23, 61.5056 )
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "jump",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
@@ -26,14 +27,56 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "idle",
+"name": "jump",
 "speed": 5.0
 } ]
 
-[node name="spike_man" type="Area2D"]
+[sub_resource type="Animation" id=3]
 
-input/pickable = false
-shapes/0/shape = SubResource( 3 )
+resource/name = "long_walk"
+length = 7.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Area2D:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1, 2, 3, 5, 6, 7 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -160, 0 ), Vector2( -160, 0 ), Vector2( 160, 0 ), Vector2( 160, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Area2D/anim_sprite:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 1, 2, 3, 5, 6, 7 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "walk", "idle", "walk", "idle", "walk", "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Area2D/anim_sprite:flip_h")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 1, 3, 6 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true ]
+}
+
+[node name="spike_man" type="Node2D"]
+
+script/script = ExtResource( 1 )
+long_walk = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 16 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -41,26 +84,47 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 collision/mask = 2
-script/script = ExtResource( 1 )
 
-[node name="anim_sprite" type="AnimatedSprite" parent="."]
+[node name="anim_sprite" type="AnimatedSprite" parent="Area2D"]
 
 frames = SubResource( 2 )
-animation = "walk"
-frame = 1
+animation = "idle"
 playing = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="shape" type="CollisionShape2D" parent="."]
+[node name="shape" type="CollisionShape2D" parent="Area2D"]
 
 transform/pos = Vector2( 0, 16 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="anim_ai" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/long_walk = SubResource( 3 )
+anims/short_walk = ExtResource( 6 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="anim_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="body_enter" from="Area2D" to="." method="_on_Area2D_body_enter"]
+
+[connection signal="timeout" from="anim_timer" to="." method="_on_anim_timer_timeout"]
 
 
