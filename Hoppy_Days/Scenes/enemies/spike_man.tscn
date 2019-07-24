@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://Scenes/enemies/spike_man.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Enemies/spikeMan_stand.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Enemies/spikeMan_walk1.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Enemies/spikeMan_walk2.png" type="Texture" id=4]
 [ext_resource path="res://GFX/Enemies/spikeMan_jump.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/enemies/spike_man_ai.tres" type="Animation" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -71,7 +70,6 @@ tracks/2/keys = {
 [node name="spike_man" type="Node2D"]
 
 script/script = ExtResource( 1 )
-long_walk = false
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -110,7 +108,6 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/long_walk = SubResource( 3 )
-anims/short_walk = ExtResource( 6 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]

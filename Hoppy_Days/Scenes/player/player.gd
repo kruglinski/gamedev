@@ -85,6 +85,27 @@ func enter_spring(body):
 	sound.play("jump")
 	vel.y = MAX_JUMP * 2
 
+func pain(body):
+	sound.play("pain")
+
+	vel.y = MIN_JUMP
+
+	var them_pos = body.get_pos()
+	var me_pos = get_pos()
+
+	vel.x = sign(me_pos.x-them_pos.x) * 20
+
+func enter_lighting(body, pain_jump):
+	sound.play("pain")
+	global.life_count -= 1
+	if global.life_count == 0:
+		dead()
+
+	if pain_jump:
+		pain(body)
+
+	emit_signal("update_hud")
+
 func enter_spike_man(body, pain_jump):
 	sound.play("pain")
 	global.life_count -= 1
@@ -92,12 +113,7 @@ func enter_spike_man(body, pain_jump):
 		dead()
 
 	if pain_jump:
-		vel.y = MIN_JUMP
-
-		var them_pos = body.get_pos()
-		var me_pos = get_pos()
-
-		vel.x = sign(me_pos.x-them_pos.x) * 20
+		pain(body)
 
 	emit_signal("update_hud")
 
@@ -108,12 +124,7 @@ func enter_spike(body, pain_jump):
 		dead()
 
 	if pain_jump:
-		vel.y = MIN_JUMP
-
-		var them_pos = body.get_pos()
-		var me_pos = get_pos()
-
-		vel.x = sign(me_pos.x-them_pos.x) * 20
+		pain(body)
 
 	emit_signal("update_hud")
 

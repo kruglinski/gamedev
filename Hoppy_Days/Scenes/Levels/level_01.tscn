@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://Scenes/Levels/level_01.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=2]
@@ -9,14 +9,12 @@
 [ext_resource path="res://Scenes/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/controller/controller.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/hud/hud.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/environment/spike_down.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/environment/spike_top.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/environment/spikes_down.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/environment/spikes_top.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/items/spring.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/items/coin.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/items/portal.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/enemies/spike_man.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/environment/spikes_top.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/items/spring.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/items/coin.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/items/portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/enemies/cloud.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/enemies/sun.tscn" type="PackedScene" id=15]
 
 [node name="level_01" type="Node2D"]
 
@@ -198,19 +196,7 @@ controller_color = Color( 1, 1, 1, 0.2 )
 
 [node name="spikes" type="Node2D" parent="."]
 
-[node name="spike_down" parent="spikes" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 330.784, 256.532 )
-
-[node name="spike_top" parent="spikes" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 497.213, 208.44 )
-
-[node name="spikes_down" parent="spikes" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 415.014, 257.031 )
-
-[node name="spikes_top" parent="spikes" instance=ExtResource( 13 )]
+[node name="spikes_top" parent="spikes" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 918.913, 73.88 )
 
@@ -221,7 +207,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="spring" parent="springs" instance=ExtResource( 14 )]
+[node name="spring" parent="springs" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1073.39, 37.7923 )
 
@@ -231,96 +217,91 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="coin" parent="coins" instance=ExtResource( 15 )]
+[node name="coin" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 511.881, 646.848 )
 
-[node name="coin_1" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_1" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 584.518, 583.449 )
 
-[node name="coin_2" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_2" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 598.396, 466.042 )
 
-[node name="coin_3" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_3" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 646.2, 656.101 )
 
-[node name="coin_4" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_4" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 500.091, 525.125 )
 
-[node name="coin_5" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_5" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 659.572, 543.766 )
 
-[node name="coin_6" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_6" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1123.88, 503.682 )
 
-[node name="coin_7" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_7" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1195.7, 375.077 )
 
-[node name="coin_8" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_8" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1287.56, 248.144 )
 
-[node name="coin_9" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_9" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1514.71, 218.08 )
 
-[node name="coin_10" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_10" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1726.18, -46.2609 )
 
-[node name="coin_11" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_11" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2035.84, 16.6775 )
 
-[node name="coin_12" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_12" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1988, -63.8837 )
 
-[node name="coin_16" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_16" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2103.81, -58.8486 )
 
-[node name="coin_17" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_17" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2103.81, -58.8486 )
 
-[node name="coin_13" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_13" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2131.5, 46.8879 )
 
-[node name="coin_14" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_14" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2040.87, 99.7561 )
 
-[node name="coin_15" parent="coins" instance=ExtResource( 15 )]
+[node name="coin_15" parent="coins" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1955.27, 44.3704 )
 
-[node name="portal" parent="." instance=ExtResource( 16 )]
+[node name="portal" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 1079.85, 821.209 )
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="spike_man" parent="enemies" instance=ExtResource( 17 )]
+[node name="cloud" parent="enemies" instance=ExtResource( 14 )]
 
-transform/pos = Vector2( 452.16, 243.327 )
-long_walk = true
+transform/pos = Vector2( 338.663, -1.85062 )
 
-[node name="spike_man_2" parent="enemies" instance=ExtResource( 17 )]
+[node name="sun" parent="enemies" instance=ExtResource( 15 )]
 
-transform/pos = Vector2( 428.235, 627.979 )
-
-[node name="spike_man_1" parent="enemies" instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 1023.88, 48.7099 )
+transform/pos = Vector2( 772.505, -9.08826 )
 
 [connection signal="update_hud" from="player" to="CanvasLayer/HUD" method="_on_player_update_hud"]
 
@@ -335,5 +316,9 @@ transform/pos = Vector2( 1023.88, 48.7099 )
 [connection signal="right_pressed" from="CanvasLayer/controller" to="player" method="_on_controller_right_pressed"]
 
 [connection signal="right_released" from="CanvasLayer/controller" to="player" method="_on_controller_right_released"]
+
+[connection signal="drop_lighting" from="enemies/cloud" to="." method="_on_cloud_drop_lighting"]
+
+[connection signal="drop_sun" from="enemies/sun" to="." method="_on_sun_drop_sun"]
 
 
