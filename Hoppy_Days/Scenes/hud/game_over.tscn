@@ -74,7 +74,6 @@ transform/pos = Vector2( 1330, 380 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -122,7 +121,7 @@ custom_colors/font_color = Color( 0.227051, 0.395092, 0.96875, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Restart"
+text = "Try again"
 flat = true
 __meta__ = {
 "_edit_lock_": true

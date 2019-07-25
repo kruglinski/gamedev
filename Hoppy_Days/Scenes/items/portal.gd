@@ -3,6 +3,7 @@ extends Area2D
 export var child_portal = false
 
 onready var anim = get_node("anim")
+onready var sfx = get_node("sfx")
 
 var other_portal
 var transporting = false
@@ -16,10 +17,14 @@ func _ready():
 	anim.play("portal_blink")
 
 func _on_portal_body_enter( body ):
+
 	if not transporting:
+		body.enter_portal(self)
+		sfx.play("transport")
 		other_portal.transporting = true
 		body.set_pos(other_portal.get_global_pos())
-		body.enter_portal(self)
 
 func _on_portal_body_exit( body ):
-	transporting = false
+	if transporting:
+		transporting = false
+		body.leave_portal(self)

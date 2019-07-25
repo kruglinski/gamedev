@@ -21,7 +21,7 @@ controller_color = Color( 1, 1, 1, 0.4 )
 
 [node name="navi_left_pos" type="Position2D" parent="."]
 
-transform/pos = Vector2( 384, 936 )
+transform/pos = Vector2( 360, 1008 )
 __meta__ = {
 "_edit_lock_": true
 }
