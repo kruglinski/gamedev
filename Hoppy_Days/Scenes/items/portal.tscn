@@ -39,6 +39,7 @@ angular_damp = 1.0
 collision/layers = 4
 collision/mask = 2
 script/script = ExtResource( 1 )
+child_portal = false
 
 [node name="shape" type="CollisionShape2D" parent="."]
 
@@ -68,7 +69,7 @@ autoplay = "portal_blink"
 transform/scale = Vector2( 3, 1 )
 z/z = -1
 config/amount = 64
-config/lifetime = 3.0
+config/lifetime = 1.0
 config/process_mode = 1
 config/half_extents = Vector2( 50, 50 )
 config/explosiveness = 0.0
@@ -101,6 +102,10 @@ gravity = 20.0
 absorption = 0.0
 particles_path = NodePath("../Particles2D")
 
+[node name="Position2D" type="Position2D" parent="."]
+
 [connection signal="body_enter" from="." to="." method="_on_portal_body_enter"]
+
+[connection signal="body_exit" from="." to="." method="_on_portal_body_exit"]
 
 

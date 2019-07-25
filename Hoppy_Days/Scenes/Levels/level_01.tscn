@@ -291,7 +291,13 @@ transform/pos = Vector2( 1955.27, 44.3704 )
 
 [node name="portal" parent="." instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 1079.85, 821.209 )
+transform/pos = Vector2( 309.842, 592.329 )
+
+[node name="peer" parent="portal" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 1873.77, -190.742 )
+transform/scale = Vector2( 1, 1 )
+child_portal = true
 
 [node name="enemies" type="Node2D" parent="."]
 
