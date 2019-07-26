@@ -13,5 +13,4 @@ func _ready():
 	pass
 
 func _on_buttons_signal_to_perent( sig, arg0, arg1, arg2, arg3, arg4 ):
-	print(sig)
 	emit_signal(sig)
