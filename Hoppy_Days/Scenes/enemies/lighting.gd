@@ -9,6 +9,7 @@ func _ready():
 	sprite.set_texture(tex)
 
 func _on_lighting_body_enter( body ):
+	clear_shapes()
 	body.enter_lighting(self, true)
 	queue_free()
 

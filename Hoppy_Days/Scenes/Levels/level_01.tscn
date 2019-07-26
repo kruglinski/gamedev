@@ -159,15 +159,12 @@ z/z = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
 [node name="controller" parent="CanvasLayer" instance=ExtResource( 8 )]
-
-controller_color = Color( 1, 1, 1, 0.2 )
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 9 )]
 

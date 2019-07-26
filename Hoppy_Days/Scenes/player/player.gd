@@ -14,13 +14,14 @@ onready var anim_sprite = get_node("anim_sprite")
 onready var left_ray = get_node("left_ray")
 onready var right_ray = get_node("right_ray")
 onready var sound = get_node("sound")
-onready var cam = get_node("Camera2D")
 
 var vel = Vector2()
 var acc = Vector2()
 var dir = Vector2()
 
 var anim = "idle"
+
+var transporting = false
 
 func _ready():
 	set_process(true)
@@ -134,20 +135,20 @@ func enter_coin(body):
 	emit_signal("update_hud")
 
 func enter_portal(body):
-	print("enter portal")
-	cam.set_enable_follow_smoothing(true)
+	transporting = true
 
 func leave_portal(body):
-	print("leave portal")
-	cam.set_enable_follow_smoothing(false)
+	transporting = false
 
 func _on_VisibilityNotifier2D_exit_viewport( viewport ):
-	if get_pos().y > 0 and not cam.is_follow_smoothing_enabled():
+	if get_pos().y > 0 and not transporting:
 		dead()
 
 func dead():
-	sound.play("pain")
 	emit_signal("player_death")
+
+	clear_shapes()
+	sound.play("pain")
 
 	anim_sprite.stop()
 	set_process(false)

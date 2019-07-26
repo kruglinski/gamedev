@@ -19,10 +19,11 @@ func _ready():
 func _on_portal_body_enter( body ):
 
 	if not transporting:
-		body.enter_portal(self)
-		sfx.play("transport")
 		other_portal.transporting = true
+		body.enter_portal(self)
 		body.set_pos(other_portal.get_global_pos())
+		sfx.play("transport")
+
 
 func _on_portal_body_exit( body ):
 	if transporting:
