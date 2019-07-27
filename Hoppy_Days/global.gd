@@ -5,6 +5,8 @@ var life_count
 
 const scene_game_level_01 = "res://Scenes/Levels/level_01.tscn"
 const scene_game_over = "res://Scenes/hud/game_over.tscn"
+const scene_game_win = "res://Scenes/hud/game_win.tscn"
+
 const music = "res://SFX/Chiptune_Adventures_1.ogg"
 
 func _ready():
@@ -17,3 +19,6 @@ func restart_game():
 
 func game_over():
 	get_tree().change_scene(scene_game_over)
+
+func game_win():
+	get_tree().change_scene(scene_game_win)

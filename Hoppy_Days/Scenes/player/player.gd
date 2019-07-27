@@ -32,7 +32,7 @@ func is_on_floor():
 
 func _process(delta):
 
-	if is_on_floor() and vel.y == 0:
+	if is_on_floor() and abs(vel.y) < 0.5:
 		if abs(vel.x) > 0.5:
 			anim = "walk"
 		else:
@@ -83,9 +83,9 @@ func _on_controller_action_2_pressed():
 		sound.play("jump")
 		vel.y = MAX_JUMP
 
-func enter_spring(body):
+func enter_spring(body, e):
 	sound.play("jump")
-	vel.y = MAX_JUMP * 2
+	vel.y = MAX_JUMP * e
 
 func pain(body):
 	sound.play("pain")
@@ -153,3 +153,6 @@ func dead():
 	anim_sprite.stop()
 	set_process(false)
 	set_fixed_process(false)
+
+func player_win(body):
+	global.game_win()
