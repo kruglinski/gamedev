@@ -4,10 +4,10 @@ func _ready():
 	set_process_input(true)
 
 func _input(event):
-	
+
 	if not (event.type == InputEvent.KEY and not event.pressed):
 		return
-	
+
 	if Globals.load_resource_pack("res://spotlight.pck"):
 		dir_contents("res://")
 		# var png = ResourceLoader.load("res://volume_light.png")
