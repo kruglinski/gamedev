@@ -14,11 +14,9 @@ animations = [ {
 
 [node name="bunny_pink" type="AnimatedSprite"]
 
-transform/pos = Vector2( 1190, 410 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 
 

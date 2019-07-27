@@ -67,10 +67,11 @@ __meta__ = {
 
 [node name="bunny_pink" parent="." instance=ExtResource( 3 )]
 
-frame = 0
+transform/pos = Vector2( 1190, 410 )
 
 [node name="bunny_yellow" parent="." instance=ExtResource( 4 )]
 
+transform/pos = Vector2( 1510, 410 )
 walking = true
 
 [node name="Label" type="Label" parent="."]

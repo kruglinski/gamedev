@@ -192,7 +192,7 @@ child_portal = true
 
 [node name="bunny_yellow" parent="." instance=ExtResource( 11 )]
 
-transform/pos = Vector2( 5634.92, 159.545 )
+transform/pos = Vector2( 5654.88, 163.893 )
 transform/scale = Vector2( 1, 1 )
 
 [connection signal="update_hud" from="player" to="CanvasLayer/HUD" method="_on_player_update_hud"]
