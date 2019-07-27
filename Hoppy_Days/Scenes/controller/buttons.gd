@@ -1,6 +1,6 @@
 extends Control
 
-export var controller_color = Color(1, 1, 0, 0.2)
+export var controller_color = Color(0, 1, 0, 0.2)
 
 signal left_pressed
 signal left_released

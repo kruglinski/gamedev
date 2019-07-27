@@ -17,7 +17,7 @@ script/script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
-controller_color = Color( 1, 1, 0, 0.2 )
+controller_color = Color( 0, 1, 0, 0.2 )
 
 [node name="navi_left_pos" type="Position2D" parent="."]
 
