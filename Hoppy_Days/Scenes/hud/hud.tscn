@@ -64,7 +64,7 @@ margin/top = 47.0
 margin/right = 2512.0
 margin/bottom = 106.0
 texture = ExtResource( 2 )
-stretch_mode = 0
+stretch_mode = 3
 
 [node name="coin_icon" type="TextureFrame" parent="."]
 

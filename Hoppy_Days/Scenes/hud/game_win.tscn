@@ -68,6 +68,7 @@ __meta__ = {
 [node name="bunny_pink" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1190, 410 )
+frame = 1
 
 [node name="bunny_yellow" parent="." instance=ExtResource( 4 )]
 

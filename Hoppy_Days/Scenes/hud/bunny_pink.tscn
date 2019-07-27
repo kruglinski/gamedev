@@ -17,6 +17,7 @@ animations = [ {
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "default"
+frame = 1
 playing = true
 
 

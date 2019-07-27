@@ -77,10 +77,10 @@ autoplay = "portal_blink"
 
 transform/scale = Vector2( 3, 1 )
 z/z = -1
-config/amount = 64
+config/amount = 32
 config/lifetime = 3.0
 config/process_mode = 1
-config/half_extents = Vector2( 30, 30 )
+config/half_extents = Vector2( 28, 28 )
 config/explosiveness = 0.0
 params/direction = 0.0
 params/spread = 360.0

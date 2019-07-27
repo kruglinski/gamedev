@@ -45,7 +45,7 @@ autoplay = ""
 [node name="RayCast2D" type="RayCast2D" parent="sprite"]
 
 enabled = true
-cast_to = Vector2( 0, 1200 )
+cast_to = Vector2( 0, 2048 )
 layer_mask = 2
 type_mask = 15
 
