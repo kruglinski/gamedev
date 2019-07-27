@@ -78,22 +78,21 @@ __meta__ = {
 
 [node name="spikes" type="Node2D" parent="."]
 
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="spikes_down_1" parent="spikes" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 1870.84, 501.514 )
+transform/pos = Vector2( 1874.94, 505.615 )
 
 [node name="spikes_down_3" parent="spikes" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 2807.3, -136.77 )
+transform/pos = Vector2( 2807.3, -140.871 )
 
 [node name="spikes_down_4" parent="spikes" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 4850.81, 439.281 )
+transform/pos = Vector2( 4863.17, 433.099 )
 
 [node name="spikes_down_2" parent="spikes" instance=ExtResource( 6 )]
 
@@ -101,23 +100,11 @@ transform/pos = Vector2( 1151.63, 302.875 )
 
 [node name="spikes_top_4" parent="spikes" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 3173.99, 547.924 )
-
-[node name="spikes_top_5" parent="spikes" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 3173.99, 547.924 )
-
-[node name="spikes_top_1" parent="spikes" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 689.01, 612.007 )
+transform/pos = Vector2( 3178.09, 547.924 )
 
 [node name="spikes_top_2" parent="spikes" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 689.01, 612.007 )
-
-[node name="spikes_top_3" parent="spikes" instance=ExtResource( 7 )]
-
-transform/pos = Vector2( 689.01, 612.007 )
+transform/pos = Vector2( 686.96, 614.058 )
 
 [node name="spike_down_1" parent="spikes" instance=ExtResource( 8 )]
 
@@ -125,7 +112,7 @@ transform/pos = Vector2( 4265.23, 133.35 )
 
 [node name="spike_top_1" parent="spikes" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 1052.75, 151.469 )
+transform/pos = Vector2( 1048.65, 149.418 )
 
 [node name="coins" type="Node2D" parent="."]
 
