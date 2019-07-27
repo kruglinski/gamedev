@@ -24,13 +24,13 @@ func _input(event):
 		return
 
 	var btn_name = ""
-	if navi_left_pos.distance_to(event.pos)<140:
+	if navi_left_pos.distance_to(event.pos) < 140:
 		btn_name = "left"
-	elif navi_right_pos.distance_to(event.pos)<140:
+	elif navi_right_pos.distance_to(event.pos) < 140:
 		btn_name = "right"
-	elif action_1_pos.distance_to(event.pos)<140:
+	elif action_1_pos.distance_to(event.pos) < 140:
 		btn_name = "action_1"
-	elif action_2_pos.distance_to(event.pos)<140:
+	elif action_2_pos.distance_to(event.pos) < 140:
 		btn_name = "action_2"
 	else:
 		return

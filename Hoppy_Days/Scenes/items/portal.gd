@@ -24,7 +24,6 @@ func _on_portal_body_enter( body ):
 		body.set_pos(other_portal.get_global_pos())
 		sfx.play("transport")
 
-
 func _on_portal_body_exit( body ):
 	if transporting:
 		transporting = false

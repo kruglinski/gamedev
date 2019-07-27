@@ -10,10 +10,11 @@
 [ext_resource path="res://SFX/jump1.wav" type="Sample" id=8]
 [ext_resource path="res://SFX/pain.wav" type="Sample" id=9]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 53.7693, 89.3639 )
+radius = 60.246
+height = 62.041
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -76,7 +77,7 @@ __meta__ = {
 
 [node name="left_ray" type="RayCast2D" parent="."]
 
-transform/pos = Vector2( -50, 80 )
+transform/pos = Vector2( -20, 80 )
 enabled = true
 cast_to = Vector2( 0, 17 )
 layer_mask = 1
@@ -87,7 +88,7 @@ __meta__ = {
 
 [node name="right_ray" type="RayCast2D" parent="."]
 
-transform/pos = Vector2( 50, 80 )
+transform/pos = Vector2( 20, 80 )
 enabled = true
 cast_to = Vector2( 0, 17 )
 layer_mask = 1
@@ -145,8 +146,6 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
-
-[connection signal="exit_screen" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_exit_screen"]
 
 [connection signal="exit_viewport" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_exit_viewport"]
 

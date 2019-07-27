@@ -19,4 +19,3 @@ func _on_shot_timer_timeout():
 func _on_start_timer_timeout():
 	anim_move.set_speed(sign(rand_range(-1, 1)))
 	anim_move.play("move")
-	start_timer.queue_free()
