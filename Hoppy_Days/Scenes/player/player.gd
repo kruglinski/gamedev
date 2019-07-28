@@ -120,7 +120,6 @@ func enter_spike_man(body, pain_jump):
 	emit_signal("update_hud")
 
 func enter_spike(body, pain_jump):
-	print("enter_spike")
 	sound.play("pain")
 	global.life_count -= 1
 	if global.life_count == 0:
