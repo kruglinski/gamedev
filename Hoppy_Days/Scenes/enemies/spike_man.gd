@@ -11,6 +11,5 @@ func _ready():
 func _on_Area2D_body_enter( body ):
 	body.enter_spike_man(self, true)
 
-
 func _on_anim_timer_timeout():
 	anim_ai.play("long_walk")
