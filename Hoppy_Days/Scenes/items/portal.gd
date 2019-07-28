@@ -9,7 +9,6 @@ var other_portal
 var transporting = false
 
 func _ready():
-
 	other_portal = get_node("peer")
 	if not other_portal:
 		other_portal = get_parent()
@@ -17,7 +16,6 @@ func _ready():
 	anim.play("portal_blink")
 
 func _on_portal_body_enter( body ):
-
 	if not transporting:
 		other_portal.transporting = true
 		body.enter_portal(self)
