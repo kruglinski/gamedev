@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scenes/Controller/Canvas.gd" type="Script" id=1]
+
+[node name="Canvas" type="Node2D"]
+
+script/script = ExtResource( 1 )
+pad_color = Color( 0, 1, 0, 0.2 )
+
+[node name="navi_tank_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 280, 720 )
+
+[node name="navi_gun_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 1600, 760 )
+
+[node name="gun_fire_pos" type="Position2D" parent="."]
+
+transform/pos = Vector2( 1760, 640 )
+
+

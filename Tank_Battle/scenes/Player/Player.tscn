@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scenes/Tank/Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/Retina/tankBody_green_outline.png" type="Texture" id=3]
+[ext_resource path="res://assets/Retina/tankGreen_barrel2_outline.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 39.7597, 43.2746 )
+
+[node name="Player" instance=ExtResource( 1 )]
+
+script/script = ExtResource( 2 )
+thrust = 10
+
+[node name="Shape" parent="."]
+
+transform/pos = Vector2( 0, 5 )
+shape = SubResource( 1 )
+
+[node name="Body" parent="."]
+
+texture = ExtResource( 3 )
+region_rect = Rect2( 437, 309, 82, 78 )
+
+[node name="Turret" parent="."]
+
+texture = ExtResource( 4 )
+offset = Vector2( 0, 20 )
+region_rect = Rect2( 744, 684, 24, 60 )
+
+[node name="Muzzle" parent="Turret"]
+
+transform/pos = Vector2( 0, 55 )
+
+
