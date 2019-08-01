@@ -31,7 +31,8 @@ func _fixed_process(delta):
 
 func navi_tank(dir):
 	set_rot(dir.angle())
-	acc = dir * thrust
+	acc = dir
+	acc = acc.clamped(thrust)
 
 func stop_tank():
 	acc.x = 0
